@@ -1,0 +1,34 @@
+<!--
+  Generated template for the TestsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Tests</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="backg">
+  <h2>Blood Glucose</h2>
+  <button ion-button color={{bg[bg.length-1].color}}>Last Result: {{bg[bg.length-1].amount}}</button>
+  <button ion-button full (click)="setBGReminders()">Set Reminders</button>
+  <button ion-button full (click)="addBGResult()">Add Test Result</button>
+  <button ion-button full (click)="history()">History</button>
+  <h2>Foot Neuropathy</h2>
+  <button ion-button color="primary">Last Result: {{fn[fn.length-1].result}}</button>
+  <button ion-button full (click)="dispInstructions()">Start Test</button>
+  <button ion-button full (click)="addFNResult()">Add Test Result</button>
+  <h5>Importance of Testing Foot Neuropathy</h5>
+  <p>Neuropathy is the loss of sensation of pain or touch, and for patients with diabetes, can result in diabetic foot.
+    Keep feet in good hygiene by washing the feet daily in warm water using mild soap while avoiding soaking feet.
+    Dry feet carefully and gently, especially between toes. Use moisturizing lotion at least once daily, avoiding area between the toes.
+  </p>
+  <p>Always wear protective footwear, and never go barefoot. Be aware of swelling of feet, redness or discoloration.
+    Trim nails straight across and file sharp corners to match shape of toe. If nails are thickened or deformed, seek treatment because they may have been infected.
+  </p>
+</ion-content>

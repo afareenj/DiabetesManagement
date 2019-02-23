@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="backg">
+  <button full class="exerciseButton">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Blood Glucose</ion-card-title>
+      <ion-card-content>Last Result: {{bg[bg.length-1].amount}}</ion-card-content>
+    </ion-card-header>
+  </ion-card>
+  </button>
+  <button full class="exerciseButton">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Diet</ion-card-title>
+      <ion-card-content>Total Calories: {{meals[0].calories}}</ion-card-content>
+        <ion-card-content>Total Carbohydrates: {{meals[0].carbs}}</ion-card-content>
+    </ion-card-header>
+  </ion-card>
+  </button>
+  <button full (click)="addMed()" class="exerciseButton">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Medications</ion-card-title>
+      <ion-card-content *ngFor="let med of meds">{{med.title}}: {{med.dose}}</ion-card-content>
+    </ion-card-header>
+  </ion-card>
+  </button>
+  <button full class="exerciseButton">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Tests</ion-card-title>
+      <ion-card-content>Foot Neuropathy: {{fn[fn.length-1].result}}</ion-card-content>
+    </ion-card-header>
+  </ion-card>
+  </button>
+  <button full (click)="addExercise()" class = "exerciseButton">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Exercise</ion-card-title>
+        <ion-card-content *ngFor="let ex of exercises">{{ex.title}}, Amount: {{ex.amount}}, Calories Burned: {{ex.calories}}</ion-card-content>
+      </ion-card-header>
+    </ion-card>
+  </button>
+</ion-content>
